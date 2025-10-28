@@ -25,7 +25,7 @@ public class BookService {
             if (keywords.length > 1) {
                 boolean[] resultsCheck = new boolean[keywords.length];
                 for (int i = 0; i < keywords.length; i++) {
-                    boolean result = b.getISBN().toUpperCase().contains(keywords[i]) || b.getAuthor().toUpperCase().contains(keywords[i].toUpperCase())
+                    boolean result = b.getIsbn().toUpperCase().contains(keywords[i]) || b.getAuthor().toUpperCase().contains(keywords[i].toUpperCase())
                             || b.getTitle().toUpperCase().contains(keywords[i].toUpperCase())
                             || b.getDescription().toUpperCase().contains(keywords[i].toUpperCase());
                     resultsCheck[i] = result;
@@ -44,7 +44,7 @@ public class BookService {
                 }
 
             } else {
-                if (b.getISBN().toUpperCase().contains(keywords[0]) || b.getAuthor().toUpperCase().contains(keywords[0].toUpperCase())
+                if (b.getIsbn().toUpperCase().contains(keywords[0]) || b.getAuthor().toUpperCase().contains(keywords[0].toUpperCase())
                         || b.getTitle().toUpperCase().contains(keywords[0].toUpperCase())
                         || b.getDescription().toUpperCase().contains(keywords[0].toUpperCase())) {
                     queryResult.add(b);
